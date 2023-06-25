@@ -58,7 +58,7 @@ class AE_SC_Decoder:
         
         s = polar_helpers.get_stabilizer_block_profile(a_vector)
         # make M random permutations from BLTA(s) with b = 0, and below block diagonal = 0
-        # This is sufficient due to Thm 2 from [2]
+        # This is sufficient due to Thm 2 from [1]
         self.permutations = [polar_helpers.linear_permutation(polar_helpers.random_block_diagonal(s)) for _ in range(M)]
         
     def decode(self, llrs): 
